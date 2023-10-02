@@ -42,4 +42,34 @@
   .scrollbar-none::-webkit-scrollbar {
     display: none;
   }
+
+  h1 {
+    font-size: 1.9em;
+
+    @media only screen and (max-width: 480px) {
+      font-size: 1.7em;
+    }
+  }
+
+  h3 {
+    font-size: 40px;
+    line-height: 40px;
+    @media only screen and (max-width: 480px) {
+      font-size: 28px;
+    }
+  }
+
+  .objectDesktop {
+    object-position: 0px center;
+  }
+
+  .objectTablet {
+    object-position: -150px center;
+  }
+
+  .objectMobile {
+    @media only screen and (max-width: 480px) {
+      object-position: -400px center;
+    }
+  }
 }

@@ -23,4 +23,14 @@ export const theme = {
 
 export default {
   content: ["./**/*.tsx"],
+  theme: {
+    extend: {
+      boxShadow: {
+        "whatssap": "2px 2px 3px #333333",
+      },
+      brightness: {
+        80: "80%",
+      },
+    },
+  },
 };
