@@ -4,7 +4,7 @@ function GlobalTags() {
   return (
     <Head>
       {/* Tailwind v3 CSS file */}
-      <link href={asset("/tailwind.css")} rel="stylesheet" />
+      <link href={asset("/styles.css")} rel="stylesheet" />
 
       {/* Icons */}
       <link
@@ -23,6 +23,18 @@ function GlobalTags() {
         rel="shortcut icon"
         type="image/x-icon"
         href={asset("/favicon-32x32.png")}
+      />
+
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+          @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700;800&display=swap');
+          
+          h1,h2,h3 {
+            font-family: 'Oxanium', cursive;
+          }
+      `,
+        }}
       />
 
       {/* Web Manifest */}
