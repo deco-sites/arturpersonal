@@ -18,8 +18,8 @@ export default function CallsWrapper(
   { logoMobile, altLogoMobile, links }: CallsWrapper,
 ) {
   return (
-    <div class="bg-[#f5f5f5]">
-      <div class="sm:px-[2rem] px-[1rem] flex sm:justify-end justify-around items-center sm:gap-x-[32px] sm:min-h-[42px] min-h-[70px] max-w-[1200px] mx-auto">
+    <div class="sm:bg-[#f5f5f5]">
+      <div class="sm:px-[2rem] px-[1rem] flex sm:justify-end justify-around items-center sm:min-h-[42px] min-h-[70px] max-w-[1200px] mx-auto">
         {logoMobile && (
           <figure class="flex sm:hidden block">
             <Image
