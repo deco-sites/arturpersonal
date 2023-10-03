@@ -4,6 +4,7 @@ import HTMLRenderer from "deco-sites/std/components/HTMLRenderer.tsx";
 import type { HTML } from "deco-sites/std/components/HTMLRenderer.tsx";
 
 export interface ConsultingContent {
+  id?: string;
   title?: string;
   cardService?: Card[];
 }
@@ -15,9 +16,9 @@ export interface Card {
   description?: HTML;
 }
 
-export default function Consulting({ title, cardService }: ConsultingContent) {
+export default function Consulting({ id, title, cardService }: ConsultingContent) {
   return (
-    <div class="max-w-[1200px] mx-auto">
+    <div class="max-w-[1200px] mx-auto" id={id}>
       <h2 class="text-center pt-[3rem] pb-[2rem] mx-[15px] sm:text-[40px] text-[30px] font-bold">
         {title}
       </h2>
