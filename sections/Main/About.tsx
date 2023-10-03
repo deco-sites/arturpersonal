@@ -17,12 +17,12 @@ export default function About(
   { id, title, image, alt, aboutContent }: AboutWrapper,
 ) {
   return (
-    <div class="flex flex-col">
+    <div class="flex flex-col" id={id}>
       <h2 class="text-center pt-[3rem] pb-[2rem] mx-[15px] sm:text-[40px] text-[30px] font-bold">
         {title}
       </h2>
       <div class="bg-[#f5f5f5] sm:p-[2rem] px-[2rem]">
-        <div class="max-w-[1200px] mx-auto" id={id}>
+        <div class="max-w-[1200px] mx-auto">
           <div class="flex md:flex-row flex-col items-center">
             <div class="">
               <figure class="">

@@ -35,7 +35,10 @@ export default function Consulting({ title, cardNote }: NotesContent) {
                 alt={card.label}
               />
             </figure>
-            <HTMLRenderer html={card.description || ""} class="text-center mt-[20px] md:text-[16px] text-[14px] leading-tight"/>
+            <HTMLRenderer
+              html={card.description || ""}
+              class="text-center mt-[20px] md:text-[16px] text-[14px] leading-tight"
+            />
           </div>
         ))}
       </div>

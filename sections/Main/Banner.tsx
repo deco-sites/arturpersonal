@@ -38,6 +38,8 @@ export default function Banner({ image, alt, bannerContent }: BannerWrapper) {
           <a
             class="mt-[20px] py-[3px] px-[15px] bg-[#33bb47] shadow-whatssap text-white rounded-[10px] flex items-center w-fit leading-[50px] text-[16px] font-bold hover:brightness-[80%] transition-all duration-500 ease-in-out delay-0"
             href={bannerContent?.button?.link}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <figure>
               <Image
