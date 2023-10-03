@@ -30,7 +30,7 @@ function GlobalTags() {
           __html: `
           @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700;800&display=swap');
           
-          h1,h2,h3 {
+          h1,h2,h3,h4 {
             font-family: 'Oxanium', cursive;
           }
       `,
