@@ -4,7 +4,7 @@
 
 import * as $$$$0 from "./routes/styles.css.ts";
 import * as $$$$1 from "./routes/_app.tsx";
-import * as $$$$$$$$0 from "./sections/Footer.tsx";
+import * as $$$$$$$$0 from "./sections/Footer/Footer.tsx";
 import * as $$$$$$$$1 from "./sections/Header/Nav.tsx";
 import * as $$$$$$$$2 from "./sections/Header/TopBar.tsx";
 import * as $$$$$$$$3 from "./sections/Hero.tsx";
@@ -192,7 +192,7 @@ const manifest = {
     "$live/sections/PageInclude.tsx": i1$$$$2,
     "$live/sections/Slot.tsx": i1$$$$3,
     "$live/sections/UseSlot.tsx": i1$$$$4,
-    "deco-sites/arturpersonal/sections/Footer.tsx": $$$$$$$$0,
+    "deco-sites/arturpersonal/sections/Footer/Footer.tsx": $$$$$$$$0,
     "deco-sites/arturpersonal/sections/Header/Nav.tsx": $$$$$$$$1,
     "deco-sites/arturpersonal/sections/Header/TopBar.tsx": $$$$$$$$2,
     "deco-sites/arturpersonal/sections/Hero.tsx": $$$$$$$$3,
