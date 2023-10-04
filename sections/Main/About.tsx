@@ -30,7 +30,7 @@ export default function About(
                   src={image || ""}
                   width={400}
                   height={517}
-                  class=""
+                  class="w-full max-w-[400px] h-full max-h-[517px]"
                   alt={alt}
                 />
               </figure>
