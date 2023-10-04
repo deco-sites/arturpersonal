@@ -8,26 +8,31 @@ interface ScrollEffects {
 const useScrollEffects = ({ Up }: ScrollEffects) => {
   useEffect(() => {
     const handleScroll = () => {
-      const elementsUp = document.querySelectorAll('[data-sal="fade"]');
+      const elementsToAnimate = document.querySelectorAll("[data-sal]");
 
-      elementsUp.forEach((elementUp) => {
-        const dataSal = elementUp.getAttribute("data-sal");
-        if (dataSal === "fade") {
-          const dataSalDelay = elementUp.getAttribute("data-sal-delay");
-          const htmlElementUp = elementUp as HTMLElement;
-          if (!htmlElementUp.classList.contains("fade-applied")) {
-            htmlElementUp.classList.add("sal-animate");
+      elementsToAnimate.forEach((element) => {
+        const dataSal = element.getAttribute("data-sal");
+        const dataSalDelay = element.getAttribute("data-sal-delay");
+        const htmlElement = element as HTMLElement;
 
-            if (dataSalDelay) {
-              const delayInSeconds = parseFloat(dataSalDelay) / 1000;
-              htmlElementUp.style.transitionDelay = `${delayInSeconds}s`;
+        if (!htmlElement.classList.contains(`${dataSal}-applied`)) {
+          htmlElement.classList.add("sal-animate");
+
+          if (dataSalDelay) {
+            const delayInSeconds = parseFloat(dataSalDelay) / 1000;
+            htmlElement.style.transitionDelay = `${delayInSeconds}s`;
+          }
+
+          const rect = htmlElement.getBoundingClientRect();
+          const isFullyVisible = rect.top >= 0 &&
+            rect.bottom <= window.innerHeight;
+
+          if (isFullyVisible) {
+            htmlElement.style.opacity = "1";
+            if (dataSal === "slide-up") {
+              htmlElement.style.transform = "translateY(0)";
             }
-            htmlElementUp.style.opacity = "0";
-            const rect = htmlElementUp.getBoundingClientRect();        
-            if (rect.top >= 0 && rect.bottom <= window.innerHeight) {         
-              htmlElementUp.style.opacity = "1";
-              htmlElementUp.classList.add("fade-applied");
-            }
+            htmlElement.classList.add(`${dataSal}-applied`);
           }
         }
       });

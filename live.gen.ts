@@ -5,6 +5,7 @@
 import * as $$$$0 from "./routes/styles.css.ts";
 import * as $$$$1 from "./routes/_app.tsx";
 import * as $$$$$0 from "./islands/Consulting.tsx";
+import * as $$$$$1 from "./islands/Notes.tsx";
 import * as $$$$$$$$0 from "./sections/Footer/Footer.tsx";
 import * as $$$$$$$$1 from "./sections/Header/Nav.tsx";
 import * as $$$$$$$$2 from "./sections/Header/TopBar.tsx";
@@ -189,6 +190,7 @@ const manifest = {
   },
   "islands": {
     "./islands/Consulting.tsx": $$$$$0,
+    "./islands/Notes.tsx": $$$$$1,
   },
   "sections": {
     "$live/sections/Conditional_Beta.tsx": i1$$$$0,
