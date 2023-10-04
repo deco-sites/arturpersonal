@@ -73,4 +73,15 @@
       object-position: -400px center;
     }
   }
+
+  .sal-animate {
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
+
+  .sal-animate-slide {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(20%);
+  }
 }
