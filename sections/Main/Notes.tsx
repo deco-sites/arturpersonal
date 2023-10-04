@@ -31,7 +31,7 @@ export default function Consulting({ title, cardNote }: NotesContent) {
                 src={card.image || ""}
                 width={481.29}
                 height={320.05}
-                class="sm:[clip-path:polygon(10%_0px,100%_0%,90%_100%,0%_100%)]"
+                class="sm:[clip-path:polygon(10%_0px,100%_0%,90%_100%,0%_100%)] w-full max-w-[481.29px] h-full max-h-[320.05px]"
                 alt={card.label}
               />
             </figure>

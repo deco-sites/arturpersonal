@@ -46,7 +46,9 @@ export default function Footer({ logo, alt, socialMedia, copyright }: Footer) {
                     alt={media.alt}
                   />
                 </figure>
-                <span class="text-white sm:text-[16px] text-[12px]">{media.label}</span>
+                <span class="text-white sm:text-[16px] text-[12px]">
+                  {media.label}
+                </span>
               </a>
             ))}
           </div>
