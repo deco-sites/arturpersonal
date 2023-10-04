@@ -4,6 +4,7 @@
 
 import * as $$$$0 from "./routes/styles.css.ts";
 import * as $$$$1 from "./routes/_app.tsx";
+import * as $$$$$0 from "./islands/Consulting.tsx";
 import * as $$$$$$$$0 from "./sections/Footer/Footer.tsx";
 import * as $$$$$$$$1 from "./sections/Header/Nav.tsx";
 import * as $$$$$$$$2 from "./sections/Header/TopBar.tsx";
@@ -186,6 +187,9 @@ const manifest = {
     "./routes/live/workflows/run.ts": $live_workflows,
     "./routes/styles.css.ts": $$$$0,
   },
+  "islands": {
+    "./islands/Consulting.tsx": $$$$$0,
+  },
   "sections": {
     "$live/sections/Conditional_Beta.tsx": i1$$$$0,
     "$live/sections/EmptySection.tsx": i1$$$$1,
@@ -358,7 +362,6 @@ const manifest = {
     "deco-sites/std/accounts/vtex.ts": i2$$6,
     "deco-sites/std/accounts/yourViews.ts": i2$$7,
   },
-  "islands": {},
   "baseUrl": import.meta.url,
 };
 
