@@ -25,6 +25,7 @@ export default function Banner({ image, alt, bannerContent }: BannerWrapper) {
           src={image || ""}
           width={1090}
           height={400}
+          loading="eager"
           class="w-full sm:h-[400px] h-[350px] object-cover md:objectDesktop sm:objectTablet objectMobile"
           alt={alt}
         />

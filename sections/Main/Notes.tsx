@@ -8,7 +8,7 @@ import { useRef } from "preact/hooks";
 export interface NotesContent {
   title?: {
     label?: string;
-    /** @description option available for animation effect: fade */
+    /** @description option available for animation effect: fade or slide-up */
     dataSal?: string;
     /** @description transition-delay duration, example: 1000 = 1s */
     dataSalDelay?: string;
@@ -17,7 +17,7 @@ export interface NotesContent {
 }
 
 export interface Card {
-  /** @description option available for animation effect: fade */
+  /** @description option available for animation effect: fade or slide-up */
   dataSal?: string;
   /** @description transition-delay duration, example: 1000 = 1s */
   dataSalDelay?: string;

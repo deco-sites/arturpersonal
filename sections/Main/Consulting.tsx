@@ -9,7 +9,7 @@ export interface ConsultingContent {
   id?: string;
   title?: {
     label?: string;
-    /** @description option available for animation effect: fade */
+    /** @description option available for animation effect: fade or slide-up */
     dataSal?: string;
     /** @description transition-delay duration, example: 1000 = 1s */
     dataSalDelay?: string;
@@ -18,7 +18,7 @@ export interface ConsultingContent {
 }
 
 export interface Card {
-  /** @description option available for animation effect: fade */
+  /** @description option available for animation effect: fade or slide-up */
   dataSal?: string;
   /** @description transition-delay duration, example: 1000 = 1s */
   dataSalDelay?: string;
