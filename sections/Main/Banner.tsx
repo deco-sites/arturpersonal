@@ -43,16 +43,16 @@ export default function Banner({ image, alt, bannerContent }: BannerWrapper) {
             rel="noopener noreferrer"
           >
             <span class="flex items-center hover:brightness-[80%] transition-all duration-500 ease-in-out delay-0 arial sm:text-[16px] text-[14px]">
-            <figure>
-              <Image
-                src={bannerContent?.button?.icon || ""}
-                width={29.85}
-                height={30}
-                class="mr-[15px]"
-                alt={bannerContent?.button?.alt}
-              />
-            </figure>
-            {bannerContent?.button?.label}
+              <figure>
+                <Image
+                  src={bannerContent?.button?.icon || ""}
+                  width={29.85}
+                  height={30}
+                  class="mr-[15px]"
+                  alt={bannerContent?.button?.alt}
+                />
+              </figure>
+              {bannerContent?.button?.label}
             </span>
           </a>
         </div>
