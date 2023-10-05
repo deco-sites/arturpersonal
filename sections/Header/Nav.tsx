@@ -2,6 +2,8 @@ import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
 import Image from "deco-sites/std/components/Image.tsx";
 
 export interface NavWrapper {
+  /** @description option to connect to the backToTop id that is in Notes */
+  id?: string;
   logoDesktop?: LiveImage;
   altLogoDesktop?: string;
   links?: NavigationLink[];
@@ -14,10 +16,10 @@ export interface NavigationLink {
 }
 
 export default function NavWrapper(
-  { logoDesktop, altLogoDesktop, links }: NavWrapper,
+  { id, logoDesktop, altLogoDesktop, links }: NavWrapper,
 ) {
   return (
-    <div class="sm:bg-transparent bg-[#f5f5f5]">
+    <div class="sm:bg-transparent bg-[#f5f5f5]" id={id}>
       <nav class="sm:px-[2rem] px-[1rem] flex sm:justify-between items-center max-w-[1200px] mx-auto py-[16px]">
         {logoDesktop && (
           <figure class="hidden sm:block">

@@ -3,9 +3,12 @@ import Image from "deco-sites/std/components/Image.tsx";
 import HTMLRenderer from "deco-sites/std/components/HTMLRenderer.tsx";
 import type { HTML } from "deco-sites/std/components/HTMLRenderer.tsx";
 import useScrollEffects from "deco-sites/start/hooks/useScrollEffects.tsx";
+import useBackToTop from "deco-sites/start/hooks/useBackToTop.tsx";
 import { useRef } from "preact/hooks";
 
 export interface NotesContent {
+ /** @description option responsible for connecting with the id that is in the Nav */
+ id?: string;
   title?: {
     label?: string;
     /** @description option available for animation effect: fade or slide-up */
@@ -27,9 +30,15 @@ export interface Card {
   description?: HTML;
 }
 
-export default function Consulting({ title, cardNote }: NotesContent) {
+export default function Consulting(
+  { id, title, cardNote }: NotesContent,
+) {
   const myElementRef = useRef(null);
   const { Up } = useScrollEffects({ Up: myElementRef });
+
+  const percentageToAppear = 0.3;
+  const isVisible = useBackToTop(percentageToAppear);
+
   return (
     <div class="max-w-[1200px] mx-auto">
       <h2
@@ -64,6 +73,16 @@ export default function Consulting({ title, cardNote }: NotesContent) {
           </div>
         ))}
       </div>
+      {isVisible && (
+        <div class="fixed sm:bottom-[1.6rem] bottom-[1rem] sm:right-[calc(100%-92%)] right-[calc(100%-95%)] max-w-[1200px] w-full mx-auto flex justify-end">
+          <a
+            href={`#${id || ""}`}
+            class="w-[35px] h-[43.47px] bg-[#2f80ed] text-white rounded-[5px] p-[10px] text-[20px] flex justify-center items-center"
+          >
+            ↑
+          </a>
+        </div>
+      )}
     </div>
   );
 }
