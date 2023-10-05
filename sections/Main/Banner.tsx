@@ -8,7 +8,7 @@ export interface BannerWrapper {
   alt?: string;
   bannerContent?: {
     text: HTML;
-    button?: {
+    whatsapp?: {
       icon?: LiveImage;
       alt?: string;
       label?: string;
@@ -31,27 +31,29 @@ export default function Banner({ image, alt, bannerContent }: BannerWrapper) {
         />
       </figure>
       <div class="absolute md:w-[47%] sm:w-[70%] md:px-0 px-[1rem] w-full">
-        <div class="flex flex-col justify-between sm:items-start items-center bg-[#00000099] sm:p-[2em] p-[1em] sm:max-w-[85%] sm:min-h-[350px] sm:max-h-[400px] max-h-[350px]">
+        <div class="flex flex-col justify-between sm:items-start items-center bg-[#00000099] sm:p-[2em] p-[1em] sm:max-w-[85%] sm:min-h-[300px] sm:max-h-[400px] max-h-[350px]">
           <HTMLRenderer
             html={bannerContent?.text || ""}
-            class="sm:text-left text-center"
+            class="sm:text-left text-center leading-tight"
           />
           <a
-            class="mt-[20px] py-[3px] px-[15px] bg-[#33bb47] shadow-whatssap text-white rounded-[10px] flex items-center w-fit leading-[50px] text-[16px] font-bold hover:brightness-[80%] transition-all duration-500 ease-in-out delay-0"
-            href={bannerContent?.button?.link}
+            class="mt-[20px] sm:py-[3px] py-[10px] sm:px-[15px] px-[2rem] bg-[#33bb47] shadow-whatsapp text-white rounded-[10px] flex items-center w-fit sm:leading-[50px] leading-normal font-bold"
+            href={bannerContent?.whatsapp?.link}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <figure>
-              <Image
-                src={bannerContent?.button?.icon || ""}
-                width={29.85}
-                height={30}
-                class="mr-[15px]"
-                alt={bannerContent?.button?.alt}
-              />
-            </figure>
-            {bannerContent?.button?.label}
+            <span class="flex items-center hover:brightness-[80%] transition-all duration-500 ease-in-out delay-0 arial sm:text-[16px] text-[14px]">
+              <figure>
+                <Image
+                  src={bannerContent?.whatsapp?.icon || ""}
+                  width={29.85}
+                  height={30}
+                  class="mr-[15px]"
+                  alt={bannerContent?.whatsapp?.alt}
+                />
+              </figure>
+              {bannerContent?.whatsapp?.label}
+            </span>
           </a>
         </div>
       </div>

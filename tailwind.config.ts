@@ -26,7 +26,7 @@ export default {
   theme: {
     extend: {
       boxShadow: {
-        "whatssap": "2px 2px 3px #333333",
+        "whatsapp": "2px 2px 3px #333333",
       },
       brightness: {
         80: "80%",

@@ -53,7 +53,7 @@ export default function Footer({ logo, alt, socialMedia, copyright }: Footer) {
             ))}
           </div>
         </div>
-        <p class="text-center text-white sm:text-[16px] text-[12px]">
+        <p class="text-center text-white text-[12px]">
           {copyright}
         </p>
       </div>

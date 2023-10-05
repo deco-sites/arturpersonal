@@ -84,4 +84,8 @@
     opacity: 0;
     transform: translateY(20%);
   }
+
+  .arial {
+    font-family: Arial, sans-serif;
+  }
 }

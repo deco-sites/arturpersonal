@@ -7,8 +7,8 @@ import useBackToTop from "deco-sites/start/hooks/useBackToTop.tsx";
 import { useRef } from "preact/hooks";
 
 export interface NotesContent {
- /** @description option responsible for connecting with the id that is in the Nav */
- id?: string;
+  /** @description option responsible for connecting with the id that is in the Nav */
+  id?: string;
   title?: {
     label?: string;
     /** @description option available for animation effect: fade or slide-up */
