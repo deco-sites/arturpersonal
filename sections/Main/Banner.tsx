@@ -8,7 +8,7 @@ export interface BannerWrapper {
   alt?: string;
   bannerContent?: {
     text: HTML;
-    button?: {
+    whatsapp?: {
       icon?: LiveImage;
       alt?: string;
       label?: string;
@@ -38,21 +38,21 @@ export default function Banner({ image, alt, bannerContent }: BannerWrapper) {
           />
           <a
             class="mt-[20px] sm:py-[3px] py-[10px] sm:px-[15px] px-[2rem] bg-[#33bb47] shadow-whatsapp text-white rounded-[10px] flex items-center w-fit sm:leading-[50px] leading-normal font-bold"
-            href={bannerContent?.button?.link}
+            href={bannerContent?.whatsapp?.link}
             target="_blank"
             rel="noopener noreferrer"
           >
             <span class="flex items-center hover:brightness-[80%] transition-all duration-500 ease-in-out delay-0 arial sm:text-[16px] text-[14px]">
               <figure>
                 <Image
-                  src={bannerContent?.button?.icon || ""}
+                  src={bannerContent?.whatsapp?.icon || ""}
                   width={29.85}
                   height={30}
                   class="mr-[15px]"
-                  alt={bannerContent?.button?.alt}
+                  alt={bannerContent?.whatsapp?.alt}
                 />
               </figure>
-              {bannerContent?.button?.label}
+              {bannerContent?.whatsapp?.label}
             </span>
           </a>
         </div>
