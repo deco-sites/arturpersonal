@@ -51,21 +51,23 @@ export default function Contact({ content }: { content: ContactContent }) {
                 class="mb-[40px] text-[16px]"
               />
               <a
-                class="md:mt-[20px] mt-0 md:mb-0 mb-[20px] py-[3px] px-[15px] bg-[#33bb47] shadow-whatssap text-white rounded-[10px] flex items-center w-fit leading-[50px] text-[16px] font-bold hover:brightness-[80%] transition-all duration-500 ease-in-out delay-0"
+                class="mt-[20px] sm:py-[3px] py-[10px] sm:px-[15px] px-[2rem] bg-[#33bb47] shadow-whatsapp text-white rounded-[10px] flex items-center w-fit sm:leading-[50px] leading-normal font-bold"
                 href={content?.whatsapp?.link}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <figure>
-                  <Image
-                    src={content?.whatsapp?.icon || ""}
-                    width={29.85}
-                    height={30}
-                    class="mr-[15px]"
-                    alt={content?.whatsapp?.alt}
-                  />
-                </figure>
-                {content?.whatsapp?.label}
+                <span class="flex items-center hover:brightness-[80%] transition-all duration-500 ease-in-out delay-0 arial sm:text-[16px] text-[14px]">
+                  <figure>
+                    <Image
+                      src={content?.whatsapp?.icon || ""}
+                      width={29.85}
+                      height={30}
+                      class="mr-[15px]"
+                      alt={content?.whatsapp?.alt}
+                    />
+                  </figure>
+                  {content?.whatsapp?.label}
+                </span>
               </a>
             </div>
           </div>

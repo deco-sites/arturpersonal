@@ -31,17 +31,18 @@ export default function Banner({ image, alt, bannerContent }: BannerWrapper) {
         />
       </figure>
       <div class="absolute md:w-[47%] sm:w-[70%] md:px-0 px-[1rem] w-full">
-        <div class="flex flex-col justify-between sm:items-start items-center bg-[#00000099] sm:p-[2em] p-[1em] sm:max-w-[85%] sm:min-h-[350px] sm:max-h-[400px] max-h-[350px]">
+        <div class="flex flex-col justify-between sm:items-start items-center bg-[#00000099] sm:p-[2em] p-[1em] sm:max-w-[85%] sm:min-h-[300px] sm:max-h-[400px] max-h-[350px]">
           <HTMLRenderer
             html={bannerContent?.text || ""}
-            class="sm:text-left text-center"
+            class="sm:text-left text-center leading-tight"
           />
           <a
-            class="mt-[20px] py-[3px] px-[15px] bg-[#33bb47] shadow-whatssap text-white rounded-[10px] flex items-center w-fit leading-[50px] text-[16px] font-bold hover:brightness-[80%] transition-all duration-500 ease-in-out delay-0"
+            class="mt-[20px] sm:py-[3px] py-[10px] sm:px-[15px] px-[2rem] bg-[#33bb47] shadow-whatsapp text-white rounded-[10px] flex items-center w-fit sm:leading-[50px] leading-normal font-bold"
             href={bannerContent?.button?.link}
             target="_blank"
             rel="noopener noreferrer"
           >
+            <span class="flex items-center hover:brightness-[80%] transition-all duration-500 ease-in-out delay-0 arial sm:text-[16px] text-[14px]">
             <figure>
               <Image
                 src={bannerContent?.button?.icon || ""}
@@ -52,6 +53,7 @@ export default function Banner({ image, alt, bannerContent }: BannerWrapper) {
               />
             </figure>
             {bannerContent?.button?.label}
+            </span>
           </a>
         </div>
       </div>
